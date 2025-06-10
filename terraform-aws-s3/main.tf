@@ -7,7 +7,7 @@ provider "aws" {
 #Note: change the bucket name to unique name
 #https://aws.amazon.com/premiumsupport/knowledge-center/s3-error-bucket-already-exists/
 resource "aws_s3_bucket" "bucket" {
-  bucket = "karthik-test-s3-bucket"
+  bucket = var.bucket_name
   acl    = "private"
 
   tags = {
